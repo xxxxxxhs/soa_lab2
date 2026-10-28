@@ -1,0 +1,234 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #222;
+  background: #f4f4f4;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.header {
+  background: #2d3e50;
+  color: #fff;
+  padding: 12px 0;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.tabs button {
+  background: none;
+  color: #fff;
+  border: 1px solid transparent;
+  margin-right: 4px;
+}
+
+.tabs button.active {
+  border-color: #fff;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 12px 16px;
+  margin: 12px 0;
+}
+
+.panel h2 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.panel h3 {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.query-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.divider {
+  width: 16px;
+}
+
+button {
+  padding: 4px 10px;
+  border: 1px solid #2d3e50;
+  background: #2d3e50;
+  color: #fff;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #fff;
+  color: #2d3e50;
+}
+
+button.danger {
+  background: #b03030;
+  border-color: #b03030;
+}
+
+button.ghost {
+  background: none;
+  border: none;
+  color: #555;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+input, select {
+  padding: 3px 4px;
+}
+
+input.short {
+  width: 110px;
+}
+
+.inline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hint {
+  color: #666;
+  margin: 4px 0;
+}
+
+.empty {
+  color: #666;
+  font-style: italic;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 4px 6px;
+  text-align: left;
+}
+
+th {
+  background: #eee;
+}
+
+td.num, th.num {
+  text-align: right;
+}
+
+tr.selectable {
+  cursor: pointer;
+}
+
+tr.selectable:hover {
+  background: #f0f4f8;
+}
+
+tr.selected {
+  background: #dde8f3;
+}
+
+.vehicle-card h3 {
+  margin: 8px 0 4px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.field.wide {
+  grid-column: 1 / -1;
+}
+
+.coordinates {
+  display: flex;
+  gap: 16px;
+  border: 1px solid #ddd;
+}
+
+.coordinates label {
+  display: flex;
+  flex-direction: column;
+}
+
+.notice {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid;
+  padding: 8px 12px;
+  margin: 12px 0;
+}
+
+.notice p {
+  margin: 4px 0 0;
+}
+
+.notice-error {
+  background: #fbeaea;
+  border-color: #b03030;
+}
+
+.notice-success {
+  background: #eaf6ea;
+  border-color: #3a8a3a;
+}
+
+.notice-info {
+  background: #eef3f8;
+  border-color: #2d3e50;
+}
+
+.footer {
+  color: #666;
+  margin: 16px auto;
+}

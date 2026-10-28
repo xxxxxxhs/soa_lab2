@@ -1,0 +1,28 @@
+plugins {
+    id 'war'
+    id 'com.github.node-gradle.node' version '7.1.0'
+}
+
+node {
+    download = true
+    version = '24.21.0'
+    npmInstallCommand = 'ci'
+}
+
+tasks.named('npm_run_build') {
+    environment.put('VITE_VEHICLES_API', providers.gradleProperty('vehiclesApi').orElse(''))
+    inputs.dir('src')
+    inputs.files('index.html', 'vite.config.js', 'package.json', 'package-lock.json')
+    inputs.property('vehiclesApi', providers.gradleProperty('vehiclesApi').orElse(''))
+    outputs.dir('dist')
+}
+
+tasks.named('jar') {
+    enabled = false
+}
+
+war {
+    dependsOn 'npm_run_build'
+    from('dist')
+    archiveFileName = 'client.war'
+}

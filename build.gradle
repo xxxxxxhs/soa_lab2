@@ -1,0 +1,17 @@
+subprojects {
+    group = 'ru.itmo.soa'
+    version = '1.0.0'
+
+    repositories {
+        mavenCentral()
+    }
+
+    plugins.withType(JavaPlugin).configureEach {
+        extensions.getByType(JavaPluginExtension).toolchain {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+        tasks.withType(JavaCompile).configureEach {
+            options.encoding = 'UTF-8'
+        }
+    }
+}
