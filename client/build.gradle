@@ -11,9 +11,11 @@ node {
 
 tasks.named('npm_run_build') {
     environment.put('VITE_VEHICLES_API', providers.gradleProperty('vehiclesApi').orElse(''))
+    environment.put('VITE_SHOP_API', providers.gradleProperty('shopApi').orElse(''))
     inputs.dir('src')
     inputs.files('index.html', 'vite.config.js', 'package.json', 'package-lock.json')
     inputs.property('vehiclesApi', providers.gradleProperty('vehiclesApi').orElse(''))
+    inputs.property('shopApi', providers.gradleProperty('shopApi').orElse(''))
     outputs.dir('dist')
 }
 

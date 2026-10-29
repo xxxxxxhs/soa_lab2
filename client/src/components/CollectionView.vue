@@ -120,9 +120,6 @@ function onPatch(form, fields) {
 
 async function onDelete() {
   const id = selected.value.id
-  if (!confirm(`Удалить транспортное средство ${id}?`)) {
-    return
-  }
   await run(async () => {
     await deleteVehicle(id)
     selected.value = null
